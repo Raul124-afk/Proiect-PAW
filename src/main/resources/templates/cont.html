@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contul meu · Monitorizare medicală</title><link rel="stylesheet" href="/app.css"></head>
+<body><main class="login card"><p class="eyebrow">CONTUL MEU</p>
+<h1 th:text="${utilizator.fullName}">Nume</h1>
+<p>Utilizator: <strong th:text="${utilizator.username}"></strong></p>
+<p>Rol: <strong th:text="${utilizator.role == 'ROLE_MEDIC' ? 'Medic' : 'Pacient'}"></strong></p>
+<p th:if="${utilizator.role == 'ROLE_PATIENT'}">Contul este activ. Accesul la panoul de măsurători este rezervat medicilor.</p>
+<p th:if="${utilizator.role == 'ROLE_MEDIC'}"><a href="/">Deschide monitorizarea</a></p>
+<form th:action="@{/logout}" method="post"><button>Deconectare</button></form>
+</main></body></html>

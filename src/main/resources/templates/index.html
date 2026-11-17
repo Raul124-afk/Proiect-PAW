@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Monitorizare medicală</title>
+        <link rel="stylesheet" href="/app.css">
+        <script src="/app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <p class="eyebrow">PROIECT EDUCAȚIONAL · DATE SIMULATE</p>
+                <h1>Monitorizare medicală</h1>
+                <p>Semne vitale și istoric, actualizate în timp real.</p>
+            </div>
+            <div>
+                <span id="user" th:text="${username}"></span>
+                <a href="/cont">Contul meu</a>
+            <form action="/logout" method="post" id="logout">
+                    <input type="hidden" id="csrf" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+                    <button class="secondary">Deconectare</button>
+                </form>
+            </div>
+        </header>
+        <main>
+            <p id="status" role="status">Conectare…</p>
+            <p id="message" role="alert"></p>
+            <div class="layout">
+                <section class="card">
+                    <h2>Înregistrează măsurători</h2>
+                    <p>Simulator de transmisie pentru un pacient identificat prin ID.</p>
+                    <form id="vitalsForm">
+                        <label for="patientId">ID pacient</label>
+                        <input id="patientId" type="number" min="1" max="9007199254740991" step="1" value="1" required>
+                        <label for="heartRate">Puls (BPM)</label>
+                        <input id="heartRate" type="number" min="1" max="300" value="75" required>
+                        <label for="oxygenLevel">SpO₂ (%)</label>
+                        <input id="oxygenLevel" type="number" min="0" max="100" value="98" required>
+                        <label for="bloodPressure">Tensiune arterială (mmHg)</label>
+                        <input id="bloodPressure" pattern="[0-9]{2,3}/[0-9]{2,3}" value="120/80" required>
+                        <label for="temperature">Temperatură (°C)</label>
+                        <input id="temperature" type="number" min="20" max="50" step="0.1" value="36.6" required>
+                        <button id="send" disabled>Salvează și transmite</button>
+                    </form>
+                </section>
+                <section class="card history">
+                    <div class="toolbar">
+                        <h2>Istoric și flux live</h2>
+                        <form id="filterForm">
+                            <label for="filter">ID pacient (gol = toți)</label>
+                            <div class="inline">
+                                <input id="filter" type="number" min="1" max="9007199254740991" step="1">
+                                <button>Filtrează</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p>Ultimele 100 de măsurători. Datele salvate rămân disponibile după reîncărcare.</p>
+                    <div class="scroll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Data și ora</th>
+                                    <th>Pacient</th>
+                                    <th>Puls</th>
+                                    <th>SpO₂</th>
+                                    <th>Tensiune</th>
+                                    <th>Temp.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="vitalsTable"></tbody>
+                        </table>
+                    </div>
+                    <p id="empty">Nu există măsurători.</p>
+                </section>
+            </div>
+        </main>
+        <footer>Limitele formularului sunt validări tehnice pentru demonstrație, nu evaluări clinice.</footer>
+    </body>
+</html>

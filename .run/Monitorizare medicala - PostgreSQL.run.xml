@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Monitorizare medicala - PostgreSQL" type="Application" factoryName="Application">
+    <envs>
+      <env name="PORT" value="8080" />
+      <env name="DB_URL" value="jdbc:postgresql://localhost:5432/medical_db" />
+      <env name="DB_USERNAME" value="postgres" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="ro.ubm.monitorizare_medicala.MonitorizareMedicalaApplication" />
+    <module name="monitorizare-medicala" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
