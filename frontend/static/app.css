@@ -1,0 +1,42 @@
+:root{font-family:system-ui,-apple-system,sans-serif;color:#183446;background:#f1f6f8;font-size:15px}
+*{box-sizing:border-box}
+body{margin:0;padding:32px;max-width:1500px;margin-inline:auto}
+header,.toolbar{display:flex;justify-content:space-between;align-items:center;gap:24px}
+h1{font-size:32px;margin:8px 0}
+h2{font-size:21px;margin-top:0}
+p{line-height:1.6;color:#4e6575}
+.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:#007b78}
+.layout{display:grid;grid-template-columns:310px 1fr;gap:24px}
+.card{background:white;padding:26px;border:1px solid #dae4e9;border-radius:14px}
+label{display:block;font-weight:600;font-size:13px;margin:15px 0 6px}
+input{width:100%;padding:11px;border:1px solid #b8cbd4;border-radius:7px;font:inherit}
+button{background:#007b78;color:white;border:0;border-radius:7px;padding:12px 18px;font:inherit;font-weight:600;cursor:pointer;margin-top:18px}
+button:hover{background:#005e5c}
+button:disabled{opacity:.5;cursor:wait}
+.secondary{background:#e0edf1;color:#183446}
+.inline{display:flex;gap:8px;align-items:baseline}
+.inline input{max-width:150px}
+.inline button{margin:0}
+.scroll{overflow:auto}
+table{width:100%;border-collapse:collapse;white-space:nowrap}
+th,td{text-align:left;padding:14px 10px;border-bottom:1px solid #e2eaee}
+th{font-size:12px;background:#f4f8fa;color:#4e6575}
+td{font-size:14px}
+#message{color:#a32c29}
+#status{font-weight:600;color:#007b78}
+footer{margin-top:25px;font-size:12px;color:#4e6575}
+.login{max-width:430px;margin:8vh auto}
+.login button{width:100%}
+#logout{display:inline;margin-left:15px}
+.history{min-width:0}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}
+.toolbar,header{align-items:flex-start;flex-direction:column}
+body{padding:18px}
+}
+
+
+/* Pagini de autentificare */
+
+:root{font-size:16px;background:#f5f8f8;color:#17343b}
+.login{max-width:460px;margin:7vh auto;padding:34px;border-radius:16px;box-shadow:0 12px 50px #1a514308}
+.login h1{font-size:29px;letter-spacing:-.7px}.login label{font-size:14px}.login p{font-size:14px}.login .eyebrow{font-size:11px;color:#087e76}.login button{background:#087e76}.login input{font-size:16px}.login a{color:#087e76}.demo-login{border-top:1px solid #e0e9e9;margin-top:24px;padding-top:17px;font-size:13px;color:#62777c}.demo-login summary{cursor:pointer;font-weight:600;color:#087e76}.demo-login p{font-size:12px;line-height:1.8;margin:10px 0}.demo-login code{font-size:11px;overflow-wrap:anywhere}

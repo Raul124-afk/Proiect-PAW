@@ -6,8 +6,8 @@
       <env name="DB_USERNAME" value="postgres" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="ro.ubm.monitorizare_medicala.MonitorizareMedicalaApplication" />
-    <module name="monitorizare-medicala" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <module name="medical-backend" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

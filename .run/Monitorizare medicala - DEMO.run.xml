@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Monitorizare medicala - DEMO" type="Application" factoryName="Application">
+    <envs><env name="SPRING_PROFILES_ACTIVE" value="demo"/><env name="PORT" value="18080"/></envs>
+    <option name="MAIN_CLASS_NAME" value="ro.ubm.monitorizare_medicala.MonitorizareMedicalaApplication"/>
+    <module name="medical-backend"/>
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend"/>
+    <method v="2"><option name="Make" enabled="true"/></method>
+  </configuration>
+</component>

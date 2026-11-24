@@ -13,7 +13,7 @@ if command -v pg_isready >/dev/null && ! pg_isready -h localhost -p 5432 >/dev/n
   echo 'PostgreSQL local nu răspunde. Pornește serviciul PostgreSQL înaintea aplicației.'
   exit 1
 fi
-jar_file=target/monitorizare-medicala-0.0.1-SNAPSHOT.jar
+jar_file=backend/target/monitorizare-medicala-0.0.1-SNAPSHOT.jar
 if [ ! -f "$jar_file" ]; then
   if [ -f ../monitorizare-medicala.jar ]; then
     jar_file=../monitorizare-medicala.jar
